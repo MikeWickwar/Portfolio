@@ -1,20 +1,29 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
+  <div class="about">
+    <WelcomeComponenet></WelcomeComponenet>
    
   </div>
 </template>
 
 <script>
+import WelcomeComponenet from '../components/WelcomeComponent.vue';
+
 export default {
-  name: 'ProjectsComponent',
+  name: 'AboutComponent',
   props: {
     msg: String
+  },
+  components: {
+    WelcomeComponenet
   }
 }
 </script>
 
 <style scoped>
+.about{
+    height: 100%;
+    width: 100%;
+}
 h3 {
   margin: 40px 0 0;
 }

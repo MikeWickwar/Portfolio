@@ -1,22 +1,25 @@
 <template>
-    <h1 class="welcome-text">Hi! Welcome to my portfolio.</h1>
+    <div>
+        <h1 class="welcome-text">Hi! Welcome to my portfolio.</h1>
+        <h1 class="welcome-text">Thank You for stopping by.</h1>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'WelcomeAnimation',
+  name: 'WelcomeComponent',
 }
 </script>
 
 <style scoped>
 .welcome-text {
   font-size: 3em; 
-  color: white; 
+  color: #fff; 
   opacity: 0; 
   animation: fadeIn 2s ease forwards; 
   text-align: right;
   position: relative;
-  right: 10vw; 
+  right: 16%; 
   top: 10vh;
 }
 
@@ -31,5 +34,4 @@ export default {
   }
 }
 </style>
-
 

@@ -9,6 +9,7 @@
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/resume">Resume</router-link></li>
         <li><router-link to="/projects">Projects</router-link></li>
+        <li><router-link to="/testimonials">Testimonials</router-link></li>
         <!-- Add more navigation links as needed -->
         <li><router-link to="/about">About</router-link></li>
         <li><a href="https://example.com" target="_blank">Blog</a></li>
