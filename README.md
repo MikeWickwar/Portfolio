@@ -82,3 +82,17 @@ npm run styleguide:build
 
 ### deployment
 this is now on git pages
+
+to deploy..
+below are commands needed to publish on git pages
+-this will build the dist folder and push the dist folder up to gh
+Build Your Project:
+
+git checkout deploy
+git merge main
+npm run build
+
+git add dist -f
+git commit -m "Add dist folder"
+
+git subtree push --prefix dist origin deploy

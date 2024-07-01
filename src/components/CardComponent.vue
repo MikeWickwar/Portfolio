@@ -13,7 +13,7 @@
             <slot name="childCardComponent"></slot>
         </b-card-text>
 
-        <h4>Want to learn more?</h4>
+        <h4>Want to learn more? </h4>
 
         <b-button :href="urlForCardBtn" target="_blank" variant="primary">{{btnText}}</b-button>
         <b-button v-if="deployUrl !== null" :href="deployUrl" target="_blank" variant="primary" class="card-btn">See the site</b-button>
