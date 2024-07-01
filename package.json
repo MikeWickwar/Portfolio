@@ -1,8 +1,7 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "private": false,
-  "scripts": {
+  "private": false,  "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
@@ -10,7 +9,7 @@
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build",
     "test:unit": "vue-cli-service test:unit",
-    "deploy": "gh-pages -d docs"
+    "deploy": "git add -f dist && git commit -m 'Deploy' && git subtree push --prefix dist origin main"
   },
   "main": "docs/portfolio.umd.js",
   "module": "docs/portfolio.common.min.js",
