@@ -13,7 +13,11 @@
             <slot name="childCardComponent"></slot>
         </b-card-text>
 
+        <h4>Want to learn more?</h4>
+
         <b-button :href="urlForCardBtn" target="_blank" variant="primary">{{btnText}}</b-button>
+        <b-button v-if="deployUrl !== null" :href="deployUrl" target="_blank" variant="primary" class="card-btn">See the site</b-button>
+
     </b-card>
     </div>
 </template>
@@ -27,7 +31,11 @@
             title: String,
             urlForCardBtn: String,
             img: String,
-            btnText: String
+            btnText: String,
+            deployUrl: {
+                default: null,
+                type: String
+            }
         }
     }
 </script>
@@ -43,6 +51,9 @@
     img.card-img-top{
         max-height: 165px;
         filter: hue-rotate(340deg);
+    }
+    .card-btn{
+        margin-top: 10px;
     }
 </style>
 

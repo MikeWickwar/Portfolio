@@ -1,7 +1,6 @@
 <template>
 <div>
   <div>
-    <h5>BigHand Identity Platform Team</h5>
     <p>
       Duende Identity Server is a powerful identity management platform designed to enhance security and authentication processes. It provides scalable identity services, ensuring robust access management across multiple applications. As part of the Identity Platform team, I played a key role in implementing and managing identity solutions using technologies like .NET Core, C#, Duende Identity Server, Webpack, JavaScript, SCSS, Docker, and SQL. I focused on integrating these solutions seamlessly to meet the security and scalability needs of our projects.
     </p>
@@ -19,7 +18,6 @@
       <li>SQL</li>
     </ul>
 
-  <h4>Want to learn more?</h4>
 </div>
 </template>
 

@@ -22,9 +22,10 @@
         :title="vdfComponentTitle" 
         :urlForCardBtn="vdfOverviewUrl" 
         :img="vdfImg"
-        :btnText="vdfButtunText">
+        :btnText="vdfButtunText"
+        :deployUrl="vdfDeployment">
       <template #childCardComponent>
-            <IdsComponent></IdsComponent>
+            <VdfComponent></VdfComponent>
       </template>
     </CardComponent>
         <CardComponent 
@@ -33,7 +34,7 @@
         :img="mbImg"
         :btnText="mbButtunText">
       <template #childCardComponent>
-            <IdsComponent></IdsComponent>
+            <DrillWriterComponent></DrillWriterComponent>
       </template>
     </CardComponent>
   </div>
@@ -43,13 +44,17 @@
 import CardComponent from '../components/CardComponent'
 import SmartTimeComponent from '../components/SmartTimeComponent'
 import IdsComponent from '../components/IdsComponent'
+import VdfComponent from '../components/VdfComponent'
+import DrillWriterComponent from '../components/DrillWriterComponent'
 
 export default {
   name: 'ProjectsComponent',
   components: {
     CardComponent,
     SmartTimeComponent,
-    IdsComponent
+    IdsComponent,
+    VdfComponent,
+    DrillWriterComponent
   },
   data() {
     return {
@@ -62,13 +67,14 @@ export default {
       idsImg: "ids.jpeg",
       idsButtunText: "View My Personal Identity Server",
       vdfOverviewUrl: "https://github.com/MikeWickwar/VDF",
+      vdfDeployment: "https://mikewickwar.github.io/VDF/",
       vdfComponentTitle: "Vegas Deal Finder",
-      vdfImg: "vegas.jpeg",
-      vdfButtunText: "View VDF",
-      mbOverviewUrl: "https://github.com/MikeWickwar/VDF",
-      mbComponentTitle: "Marching Band Drill Writing App",
+      vdfImg: "vegas.jpeg", 
+      vdfButtunText: "View Vegas Deal Finder Project",
+      mbOverviewUrl: "https://github.com/MikeWickwar/drillWriter",
+      mbComponentTitle: "Marching Band Drill Writer (WIP)",
       mbImg: "grid.png",
-      mbButtunText: "View Drill Writer App"
+      mbButtunText: "View Drill Writer App Project"
     };
   }
 }

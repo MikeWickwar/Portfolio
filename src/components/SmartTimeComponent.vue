@@ -23,7 +23,6 @@
         <li>Kendo UI</li>
     </ul>
 
-  <h4>Want to learn more?</h4>
 </div>
 
 </template>

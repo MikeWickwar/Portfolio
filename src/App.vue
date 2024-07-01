@@ -3,7 +3,7 @@
     <HeaderComponent msg="Welcome to Vue.js!"/>
     <router-view />
     <FooterComponent />
-    <div v-if="!isHomeView" id="overlay" :class="{ ' dim-background': !isHomeView }"></div>
+    <div v-if="!isHomeView" id="overlay" :class="{ 'dim-background': !isHomeView }"></div>
   </div>
 </template>
 
@@ -47,7 +47,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
- 
+  overflow-x: hidden;
 }
 #app{
     display: flex;
