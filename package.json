@@ -6,7 +6,6 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "doc:build": "npx vuedoc.md --section API --output ./README.md ./src/components/HeaderComponent.vue",
     "prepublishOnly": "npm run lint && npm run build && npm run styleguide:build && npm run doc:build",
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build",
