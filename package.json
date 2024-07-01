@@ -9,7 +9,7 @@
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build",
     "test:unit": "vue-cli-service test:unit",
-    "deploy": "git add -f dist && git commit -m 'Deploy' && git subtree push --prefix dist origin main"
+    "deploy": "git add -f dist && git commit -m 'Deploy' && git subtree push --prefix dist origin deploy"
   },
   "main": "docs/portfolio.umd.js",
   "module": "docs/portfolio.common.min.js",
