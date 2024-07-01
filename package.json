@@ -11,15 +11,15 @@
     "styleguide": "vue-styleguidist server",
     "styleguide:build": "vue-styleguidist build",
     "test:unit": "vue-cli-service test:unit",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d docs"
   },
-  "main": "dist/portfolio.umd.js",
-  "module": "dist/portfolio.common.min.js",
+  "main": "docs/portfolio.umd.js",
+  "module": "docs/portfolio.common.min.js",
   "files": [
-    "dist/*.css",
-    "dist/*.map",
-    "dist/*.js",
-    "src/*"
+    "docs/*.css",
+    "docs/*.map",
+    "docs/*.js",
+    "docs/*"
   ],
   "dependencies": {
     "bootstrap": "^5.3.3",
