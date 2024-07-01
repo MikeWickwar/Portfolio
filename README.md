@@ -79,3 +79,6 @@ npm run styleguide
 ```
 npm run styleguide:build
 ```
+
+### deployment
+this is now on git pages
