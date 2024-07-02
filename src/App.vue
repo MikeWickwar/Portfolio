@@ -18,14 +18,12 @@ export default {
     FooterComponent
   },
   data() {
-    console.log(this.$router)
     return {
       isHomeView: this.$router.history._startLocation === '/' 
     };
   },
   created() {
     this.$router.beforeEach((to, from, next) => {
-      console.log(to)
       this.isHomeView = to.path === '/'; 
       next();
     });
