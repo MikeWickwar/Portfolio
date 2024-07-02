@@ -5,28 +5,53 @@
         <i class="fa-sharp fa-solid fa-cat fa-3x"></i>
         <span class="headerTitle">Mike Wickwar</span>
       </div>
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/resume">Resume</router-link></li>
-        <li><router-link to="/projects">Projects</router-link></li>
-        <li><router-link to="/testimonials">Testimonials</router-link></li>
-        <!-- Add more navigation links as needed -->
-        <li><router-link to="/about">About</router-link></li>
-        <li><a href="https://example.com" target="_blank">Blog</a></li>
-        <li><a href="mailto:contact@example.com">Contact</a></li>
+     
+      <ul :class="{ 'nav-menu': true, open: isMenuOpen, closed: !isMenuOpen && wasMenuOpen }">
+        <li @click="closeMenu"><router-link to="/">Home</router-link></li>
+        <li @click="closeMenu"><router-link to="/resume">Resume</router-link></li>
+        <li @click="closeMenu"><router-link to="/projects">Projects</router-link></li>
+        <li @click="closeMenu"><router-link to="/testimonials">Testimonials</router-link></li>
+        <li @click="closeMenu"><router-link to="/about">About</router-link></li>
+        <li @click="closeMenu"><router-link to="/contact">Contact</router-link></li>
+        <li @click="closeMenu"><a href="mailto:mike.wickwar@gmail.com">Email Now</a></li>
       </ul>
+       <button class="menu-toggle" @click="toggleMenu" aria-label="Toggle navigation">
+        <i class="fa fa-bars"></i>
+      </button>
     </nav>
   </header>
 </template>
 
 <script>
 export default {
-  name: 'HeaderComponent'
-}
+  name: 'HeaderComponent',
+  data() {
+    return {
+      isMenuOpen: false,
+      wasMenuOpen: false
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
+      this.wasMenuOpen = this.isMenuOpen;
+    },
+    closeMenu() {
+      this.isMenuOpen = false;
+    }
+  },
+  watch: {
+    isMenuOpen(newVal) {
+      if (!newVal) {
+        this.wasMenuOpen = true;
+      }
+    }
+  }
+};
 </script>
 
 <style scoped>
-header.sticky-header {
+.sticky-header {
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -51,7 +76,7 @@ nav {
   margin-right: 10px;
 }
 
-.logo span {
+.headerTitle {
   font-size: 1.2em;
   font-weight: bold;
 }
@@ -60,6 +85,9 @@ ul {
   display: flex;
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 li {
@@ -73,5 +101,47 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .menu-toggle {
+    display: block;
+    align-self: self-start;  
+    margin-top: 5px;
+  }
+
+ul.closed {
+  max-height: 0;
+  opacity: 0;
+}
+ul.open {
+  max-height: 300px; /* Adjust based on the content height */
+  opacity: 1;
+}
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  text-align: right;
+}
 }
 </style>

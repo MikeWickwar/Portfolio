@@ -27,6 +27,10 @@
       </b-carousel-slide>
 
       <b-carousel-slide 
+            img-src="dg.jpg">
+      </b-carousel-slide>
+
+      <b-carousel-slide 
             img-src="drums.jpg">
       </b-carousel-slide>
     </b-carousel>
@@ -76,6 +80,18 @@
   .carousel *{
     border-radius: 10px;
   }
+
+  @media (max-width: 768px) {
+    #pizzaImg{
+        position: relative;
+        bottom: 0;
+      }
+
+    .carousel-inner{
+      max-height: 220px;
+    }
+  }
+
   
 </style>
 

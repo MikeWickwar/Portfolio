@@ -19,7 +19,7 @@ export default {
   animation: fadeIn 2s ease forwards; 
   text-align: right;
   position: relative;
-  right: 16%; 
+  right: 5%; 
   top: 10vh;
 }
 

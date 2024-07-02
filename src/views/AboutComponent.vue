@@ -43,6 +43,10 @@ export default {
   margin: 0 auto;
   width: 720px;
 }
- 
+@media (max-width: 768px) {
+  .about-content {
+    width: 80%;
+  }
+}
 
 </style>
