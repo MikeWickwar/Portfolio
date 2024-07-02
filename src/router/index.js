@@ -19,3 +19,4 @@ export default new Router({
     { path: '/testimonials', component: TestimonialsComponent }
   ]
 })
+ 

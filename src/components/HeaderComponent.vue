@@ -3,7 +3,7 @@
     <nav>
       <div class="logo">
         <i class="fa-sharp fa-solid fa-cat fa-3x"></i>
-        <span class="headerTitle">Mike Wickwar's Portfolio</span>
+        <span class="headerTitle">Mike Wickwar</span>
       </div>
       <ul>
         <li><router-link to="/">Home</router-link></li>

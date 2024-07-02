@@ -40,10 +40,9 @@ export default {
   z-index: 2;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 80vw;
   margin: 0 auto;
+  width: 720px;
 }
-
+ 
 
 </style>
