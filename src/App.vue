@@ -49,6 +49,11 @@ body {
   flex-direction: column;
   overflow-x: hidden;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 #app{
     display: flex;
     flex: 1;
@@ -56,7 +61,7 @@ body {
     justify-content: space-between;
     image-rendering: -webkit-optimize-contrast;
     max-width: 100%;
-    background-repeat: no-repeat;
+    background-repeat: ;
     background-image: url('./assets/trees.jpg');
 }
 #overlay{

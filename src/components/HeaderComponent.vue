@@ -62,6 +62,7 @@ export default {
   color: #fff;
   padding: 10px 20px;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
 }
 
 nav {
