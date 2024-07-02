@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h1 class="welcome-text">Hi! Welcome to my portfolio.</h1>
+        <h1 class="welcome-text">Hi!</h1>
+        <h1 class="welcome-text">Welcome to my portfolio.</h1>
         <h1 class="welcome-text">Thank You for stopping by.</h1>
     </div>
 </template>
@@ -19,10 +20,14 @@ export default {
   animation: fadeIn 2s ease forwards; 
   text-align: right;
   position: relative;
-  right: 5%; 
+  right: 20%; 
   top: 10vh;
 }
-
+@media (max-width: 768px) {
+  .welcome-text {
+    right: 5%; 
+  }
+}
 @keyframes fadeIn {
   0% {
     opacity: 0; /* Start with opacity 0 */
