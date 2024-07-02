@@ -23,15 +23,15 @@
       </b-carousel-slide>
 
       <b-carousel-slide 
-            img-src="griz.jpg">
+            img-src="griz.JPG">
       </b-carousel-slide>
 
       <b-carousel-slide 
-            img-src="dg.jpg">
+            img-src="dg.JPG">
       </b-carousel-slide>
 
       <b-carousel-slide 
-            img-src="drums.jpg">
+            img-src="drums.JPG">
       </b-carousel-slide>
     </b-carousel>
 

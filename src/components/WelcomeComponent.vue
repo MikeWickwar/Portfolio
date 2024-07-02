@@ -2,7 +2,7 @@
     <div>
         <h1 class="welcome-text">Hi!</h1>
         <h1 class="welcome-text">Welcome to my portfolio.</h1>
-        <h1 class="welcome-text">Thank You for stopping by.</h1>
+        <h1 class="welcome-text"><span style="color: #ffff99;">Thank You</span> for stopping by.</h1>
     </div>
 </template>
 

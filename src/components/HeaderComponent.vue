@@ -1,25 +1,28 @@
 <template>
-  <header class="sticky-header">
-    <nav>
-      <div class="logo">
-        <i class="fa-sharp fa-solid fa-cat fa-3x"></i>
-        <span class="headerTitle">Mike Wickwar</span>
-      </div>
-     
-      <ul :class="{ 'nav-menu': true, open: isMenuOpen, closed: !isMenuOpen && wasMenuOpen }">
-        <li @click="closeMenu"><router-link to="/">Home</router-link></li>
-        <li @click="closeMenu"><router-link to="/resume">Resume</router-link></li>
-        <li @click="closeMenu"><router-link to="/projects">Projects</router-link></li>
-        <li @click="closeMenu"><router-link to="/testimonials">Testimonials</router-link></li>
-        <li @click="closeMenu"><router-link to="/about">About</router-link></li>
-        <li @click="closeMenu"><router-link to="/contact">Contact</router-link></li>
-        <li @click="closeMenu"><a href="mailto:mike.wickwar@gmail.com">Email Now</a></li>
-      </ul>
-       <button class="menu-toggle" @click="toggleMenu" aria-label="Toggle navigation">
-        <i class="fa fa-bars"></i>
-      </button>
-    </nav>
-  </header>
+  <div>
+    <header class="sticky-header">
+      <nav>
+        <div class="logo">
+          <i class="fa-sharp fa-solid fa-cat fa-3x"></i>
+          <span class="headerTitle">Mike Wickwar</span>
+        </div>
+      
+        <ul :class="{ 'nav-menu': true, open: isMenuOpen, closed: !isMenuOpen && wasMenuOpen }">
+          <li @click="closeMenu"><router-link to="/">Home</router-link></li>
+          <li @click="closeMenu"><router-link to="/resume">Resume</router-link></li>
+          <li @click="closeMenu"><router-link to="/projects">Projects</router-link></li>
+          <li @click="closeMenu"><router-link to="/testimonials">Testimonials</router-link></li>
+          <li @click="closeMenu"><router-link to="/about">About</router-link></li>
+          <li @click="closeMenu"><router-link to="/contact">Contact</router-link></li>
+          <li @click="closeMenu"><a href="mailto:mike.wickwar@gmail.com">Email Now</a></li>
+        </ul>
+        <button class="menu-toggle" @click="toggleMenu" aria-label="Toggle navigation">
+          <i class="fa fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+    <div class="overlay" @click="closeMenu" v-if="isMenuOpen"></div>
+  </div>
 </template>
 
 <script>
@@ -112,6 +115,17 @@ a:hover {
   cursor: pointer;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 999; /* Ensure it's above other content */
+  display: none; /* Initially hidden */
+}
+
 @media (max-width: 768px) {
   ul {
     flex-direction: column;
@@ -124,24 +138,27 @@ a:hover {
     margin-top: 5px;
   }
 
-ul.closed {
-  max-height: 0;
-  opacity: 0;
-}
-ul.open {
-  max-height: 300px; /* Adjust based on the content height */
-  opacity: 1;
-}
-ul {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  text-align: right;
-}
+  ul.closed {
+    max-height: 0;
+    opacity: 0;
+  }
+  ul.open {
+    max-height: 300px; /* Adjust based on the content height */
+    opacity: 1;
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    text-align: right;
+  }
+  .overlay {
+    display: block; /* Show overlay on smaller screens */
+  }
 }
 </style>
