@@ -1,5 +1,9 @@
 <template>
-  <div class="resume-container">
+  <div class="resume-container" id="resume">
+    <b-button :href="resumeLink" download="Wickwar_Resume.pdf" id="downloadResume">
+      Download
+    </b-button>
+
     <header class="resume-header">
       <h1>Mike Wickwar</h1>
       <h2>Senior Software Developer</h2>
@@ -114,12 +118,46 @@
 </template>
 
 <script>
+import html2pdf from 'html2pdf.js';
+
 export default {
   name: 'ResumeComponent',
+  import: {
+      html2pdf
+    },
+    data(){
+      return{
+        resumeLink: "Wickwar_Resume.pdf"
+      }
+    },
+    methods: {
+    downloadPDF() {
+      const element = document.getElementById('resume');
+      const options = {
+        margin: 1,
+        filename: 'WickwarResume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2, scrollX: 0, scrollY: 0, useCORS: true, logging: true, allowTaint: true },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+
+      // Calculate the full height of the scrollable content
+      const elementHeight = element.scrollHeight;
+      element.style.height = `${elementHeight}px`;
+
+      html2pdf().set(options).from(element).save();
+
+      // Reset the height after generating the PDF
+      element.style.height = '';
+    }
+  }
 }
 </script>
 
 <style scoped>
+#downloadResume{
+  margin-bottom: 15px;
+}
 .resume-container {
   max-width: 80vw;
   max-height: 70vh;
