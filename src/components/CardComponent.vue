@@ -50,7 +50,7 @@
     }
     img.card-img-top{
         max-height: 165px;
-        filter: hue-rotate(340deg);
+        filter: hue-rotate(2deg);
     }
     .card-btn{
         margin-top: 10px;

@@ -19,7 +19,7 @@ export default {
   },
   data() {
     return {
-      isHomeView: this.$router.history._startLocation === '/' 
+      isHomeView: this.$router.history.current.fullPath === '/' 
     };
   },
   created() {
@@ -60,7 +60,7 @@ body {
     image-rendering: -webkit-optimize-contrast;
     max-width: 100%;
     background-repeat: ;
-    background-image: url('./assets/trees.jpg');
+    background-image: url('./assets/sunset.jpg');
 }
 #overlay{
    position: absolute;

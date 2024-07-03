@@ -55,7 +55,8 @@ export default {
 
 <style scoped>
 .sticky-header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 1000;
   background-color: #333;

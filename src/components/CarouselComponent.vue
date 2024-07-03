@@ -3,12 +3,12 @@
     <b-carousel
       class="carousel"
       v-model="slide"
-      :interval="4000"
+      :interval="2000"
       img-width="720px"
       img-height="440px"
       controls
       fade
-      background="#ababab"
+      background="rgba(0,0,0,0)"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd">
       <!-- Text slides with image -->
@@ -88,7 +88,10 @@
       }
 
     .carousel-inner{
-      max-height: 220px;
+      height: unset;
+      display: flex;
+      align-items: center;      
+
     }
   }
 
