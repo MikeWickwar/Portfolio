@@ -11,7 +11,7 @@ import TestimonialsComponent from './../views/TestimonialsComponent.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  mode: 'hash',
   routes: [
     { path: '/', component: HomeComponent },
     { path: '/about', component: AboutComponent },

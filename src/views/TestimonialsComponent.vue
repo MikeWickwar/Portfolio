@@ -35,7 +35,13 @@ export default {
           title: 'Developer & Product Manager | LegalTech veteran',
           date: 'October 28, 2022',
           content: `Mike reported to me for almost 7 years and was one of the first developers I hired at my company. Within about six months Mike had become indispensable. What I really appreciate about him is that he just gets things done and solves hard problems independently, I never needed to micro-manage him. If you don’t like to micro-manage, then Mike is the type of person you want on your team. In addition to being a top-notch developer, he also has excellent soft skills. Clients regularly reached out to me to express their appreciation for Mike’s work. Mike was a highly valued member of our team and I would hire him again in a heartbeat.`
-        }
+        },
+        {
+          name: 'Taylor Armstrong',
+          title: 'Senior Software Engineer at BigHand',
+          date: 'July 3, 2024',
+          content: `I had the pleasure of working with Mike at Smart Time Apps, Iridium, and BigHand, where he led the desktop development of Smart Time and was a vital component to our overall development efforts. From a team of 5 members with SmartTime to a company of over 350 at BigHand, Mike's expertise and collaboration skills were evident as he developed and optimized features for our SmartTime product and interacted with different teams. His leadership and determination were key factors in our success, contributing significantly to our product's acquisition by Iridium. Mike is a dedicated professional who consistently delivers outstanding results. His attention to detail and strategic problem solving approach make him an excellent addition to any team.`
+        },
       ]
     };
   }
@@ -45,7 +51,6 @@ export default {
 <style scoped>
 .testimonials-container {
   max-width: 80vw;
-  max-height: 70vh;
   margin: 0 auto;
   padding: 20px;
   font-family: Arial, sans-serif;

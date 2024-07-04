@@ -21,7 +21,7 @@ export default {
   text-align: right;
   position: relative;
   right: 20%; 
-  top: 10vh;
+  top: 15vh;
 }
 @media (max-width: 768px) {
   .welcome-text {

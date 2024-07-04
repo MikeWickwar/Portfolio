@@ -100,6 +100,6 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  padding-top: 80px;
 }
 </style>

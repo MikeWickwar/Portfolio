@@ -40,12 +40,14 @@ export default {
   z-index: 2;
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 80vw;
   margin: 0 auto;
-  width: 720px;
+  max-width: 800px;
 }
 @media (max-width: 768px) {
   .about-content {
-    width: 80%;
+    width: 100%;
   }
 }
 
