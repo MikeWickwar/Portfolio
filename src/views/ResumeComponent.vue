@@ -134,9 +134,10 @@ export default {
 }
 .resume-container {
   max-width: 80vw;
-  margin: 0 auto;
+  max-height: 70%;
+  margin: 0 auto; 
+  margin-top: 75px;
   padding: 20px;
-  padding-top: 100px;
   font-family: Arial, sans-serif;
   background-color: #e2e4e7;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

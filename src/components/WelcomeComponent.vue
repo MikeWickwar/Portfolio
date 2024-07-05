@@ -22,6 +22,7 @@ export default {
   position: relative;
   right: 20%; 
   top: 15vh;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 @media (max-width: 768px) {
   .welcome-text {
