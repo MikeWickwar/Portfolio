@@ -16,9 +16,9 @@
     </div>
 
   <div class="btnContainer">
-      <b-button :href="projectsUrl" variant="primary" class="card-btn">Back</b-button>
+      <b-button :href="projectsUrl" variant="outline-primary" class="card-btn">Back</b-button>
       <b-button v-if="btnText !== null" :href="urlForCardBtn" target="_blank" variant="primary" class="card-btn">More...</b-button>
-      <b-button v-if="deployUrl !== null" :href="deployUrl" target="_blank" variant="primary" class="card-btn">The Site</b-button>
+      <!-- <b-button v-if="deployUrl !== null" :href="deployUrl" target="_blank" variant="primary" class="card-btn">The Site</b-button> -->
   </div>
   </div>
   
@@ -85,7 +85,7 @@ export default {
 .projectDetailContainer{
     max-width: 80vw;
     margin: 0 auto; 
-    margin-top: 75px;
+    margin-top: 20px;
     padding: 20px;
     font-family: Arial, sans-serif;
     background-color: #e2e4e7;

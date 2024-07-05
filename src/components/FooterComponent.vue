@@ -26,13 +26,12 @@ footer.sticky-footer {
   position: sticky;
   bottom: 0;
   z-index: 1000;
-  background-color: #333;
   color: #fff;
   padding: 10px 20px;
   text-align: center;
-  box-shadow: 0 -8px 10px rgba(0, 0, 0, 0.6);
 
 }
+
 
 .footer-content {
   display: flex;

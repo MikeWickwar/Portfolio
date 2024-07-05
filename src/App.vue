@@ -1,9 +1,11 @@
 <template>
   <div id="app" >
-    <HeaderComponent msg="Welcome to Vue.js!"/>
-    <router-view />
+    <HeaderComponent class="header" />
+    <div class="routerContainer">
+      <router-view />
+      <div v-if="!isHomeView" id="overlay" :class="{ 'dim-background': !isHomeView }"></div>
+    </div>
     <FooterComponent />
-    <div v-if="!isHomeView" id="overlay" :class="{ 'dim-background': !isHomeView }"></div>
   </div>
 </template>
 
@@ -53,21 +55,29 @@ body {
   box-sizing: border-box;
 }
 #app{
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: space-between;
-    image-rendering: -webkit-optimize-contrast;
-    max-width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-image: url('./assets/sunset.jpg');
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+  image-rendering: -webkit-optimize-contrast;
+  max-width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-image: url('./assets/sunset.jpg');
 }
 #overlay{
-   position: absolute;
-   background-color: black;
-   height: 100%;
-   width: 100%;
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  top: 75px;
+  transition: top 0.5s ease-in-out;
+
+}
+#overlay.open{
+  top: 195px;
+  transition: top 0.5s ease-in-out;
+  
 }
 .dim-background {
     animation: fadeToBlack 2s forwards;
@@ -80,6 +90,16 @@ h2.projectDetails{
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+}
+.routerContainer{
+  margin-top: 80px;
+  overflow: auto;
+  height: 100%;
+   transition: margin-top 0.5s ease-in-out;
+}
+.routerContainer.open{
+  margin-top: 195px;
+   transition: margin-top 0.5s ease-in-out;
 }
 /* Keep the animation keyframes as defined previously */
 @keyframes fadeToBlack {

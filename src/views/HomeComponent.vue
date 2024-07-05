@@ -14,6 +14,11 @@ export default {
   },
   components: {
     WelcomeComponenet
+  },
+  created() {
+        if (document.getElementsByClassName("sticky-header").length > 0) {
+          document.getElementsByClassName("sticky-header")[0].classList.remove("open"); 
+        }
   }
 }
 </script>

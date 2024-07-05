@@ -48,6 +48,7 @@ export default {
 @media (max-width: 768px) {
   .about-content {
     width: 100%;
+    height: 650px;
   }
 }
 

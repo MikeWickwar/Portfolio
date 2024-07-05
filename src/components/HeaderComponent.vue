@@ -21,7 +21,7 @@
         </button>
       </nav>
     </header>
-    <div class="overlay" @click="closeMenu" v-if="isMenuOpen"></div>
+    <div :class="{ 'overlay': true, open: isMenuOpen, closed: !isMenuOpen && wasMenuOpen }" id="headerOpenOverlay" @click="closeMenu" v-if="isMenuOpen"></div>
   </div>
 </template>
 
@@ -31,7 +31,8 @@ export default {
   data() {
     return {
       isMenuOpen: false,
-      wasMenuOpen: false
+      wasMenuOpen: false,
+      isHomeView: true
     };
   },
   methods: {
@@ -47,8 +48,33 @@ export default {
     isMenuOpen(newVal) {
       if (!newVal) {
         this.wasMenuOpen = true;
+        if(document.getElementById("overlay")){
+          document.getElementById("overlay").classList.remove("open"); 
+        }
+        if (document.getElementsByClassName("routerContainer").length > 0) {
+          document.getElementsByClassName("routerContainer")[0].classList.remove("open"); 
+        }
+        if(!this.isHomeView){
+          document.getElementsByClassName("sticky-header")[0].classList.remove("open"); 
+        }
+      }else{
+        if(document.getElementById("overlay")){
+          document.getElementById("overlay").classList.add("open"); 
+        }
+        if (document.getElementsByClassName("routerContainer").length > 0) {
+          document.getElementsByClassName("routerContainer")[0].classList.add("open"); 
+        }
+        if(!this.isHomeView){
+          document.getElementsByClassName("sticky-header")[0].classList.add("open"); 
+        }
       }
     }
+  },
+  created() {
+    this.$router.beforeEach((to, from, next) => {
+      this.isHomeView = to.path === '/'; 
+      next();
+    });
   }
 };
 </script>
@@ -59,13 +85,17 @@ export default {
   width: 100%;
   top: 0;
   z-index: 1000;
-  background-color: #333;
   color: #fff;
   padding: 10px 20px;
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.8);
   overflow: hidden;
+  transition: box-shadow 1s ease-in-out;
 }
+.sticky-header.open {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.2s ease-in-out;
 
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -123,9 +153,13 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-  z-index: 999; /* Ensure it's above other content */
-  display: none; /* Initially hidden */
+  z-index: 999; 
+  display: none;
+  transition: top .5s ease-in-out;
+}
+.overlay.open{
+  top: 195px;
+  transition: top .5s ease-in-out;
 }
 
 @media (max-width: 768px) {

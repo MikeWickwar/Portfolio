@@ -39,6 +39,7 @@ export default {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
+  top: 30%;
 }
 
 .contact-me h2 {

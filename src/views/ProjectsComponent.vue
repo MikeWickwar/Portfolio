@@ -87,7 +87,6 @@ a {
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 80px;
   overflow-y: auto;
   box-sizing: border-box;
   width: 100%;
