@@ -6,6 +6,7 @@ import AboutComponent from './../views/AboutComponent.vue'
 import ResumeComponent from './../views/ResumeComponent.vue'
 import ContactComponent from './../views/ContactComponent.vue'
 import ProjectComponent from './../views/ProjectsComponent.vue'
+import ProjectDetailComponent from './../views/ProjectDetailComponent.vue'
 import TestimonialsComponent from './../views/TestimonialsComponent.vue'
 
 Vue.use(Router)
@@ -18,7 +19,13 @@ export default new Router({
     { path: '/resume', component: ResumeComponent },
     { path: '/projects', component: ProjectComponent },
     { path: '/contact', component: ContactComponent },
-    { path: '/testimonials', component: TestimonialsComponent }
+    { path: '/testimonials', component: TestimonialsComponent },
+    {
+      path: '/projects/:projectId',
+      name: 'ProjectDetailComponent',
+      component: ProjectDetailComponent,
+      props: true // Pass route params as props to the component
+    }
   ]
 })
  

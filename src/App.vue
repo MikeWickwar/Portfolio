@@ -45,7 +45,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 * {
   margin: 0;
@@ -59,7 +59,8 @@ body {
     justify-content: space-between;
     image-rendering: -webkit-optimize-contrast;
     max-width: 100%;
-    background-repeat: ;
+    height: 100%;
+    overflow: auto;
     background-image: url('./assets/sunset.jpg');
 }
 #overlay{
@@ -71,6 +72,15 @@ body {
 .dim-background {
     animation: fadeToBlack 2s forwards;
 }
+h2.projectDetails{
+  display: flex;
+  align-self: center;
+}
+.keyFeatures{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
 /* Keep the animation keyframes as defined previously */
 @keyframes fadeToBlack {
   from {
@@ -80,4 +90,10 @@ body {
     opacity: 0.6;
   }
 }
+  @media (max-width: 768px) {
+    html{
+      height: calc(100vh-100px);      
+
+    }
+  }
 </style>

@@ -1,7 +1,6 @@
 <template>
   <div class="about">
     <WelcomeComponenet></WelcomeComponenet>
-   
   </div>
 </template>
 

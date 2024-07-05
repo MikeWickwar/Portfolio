@@ -1,25 +1,15 @@
 <template>
-    <div>
     <b-card
-        :title="title"
+        :img-href="projectDetailsUrl"
         :img-src="img"
         img-alt="Image"
         img-top
         img-max
+        :title="title"
         tag="article"
         style="max-width: 20rem;"
         class="mb-2 card">
-        <b-card-text>
-            <slot name="childCardComponent"></slot>
-        </b-card-text>
-
-        <h4>Want to learn more? </h4>
-
-        <b-button :href="urlForCardBtn" target="_blank" variant="primary">{{btnText}}</b-button>
-        <b-button v-if="deployUrl !== null" :href="deployUrl" target="_blank" variant="primary" class="card-btn">See the site</b-button>
-
     </b-card>
-    </div>
 </template>
 
 <script>
@@ -29,15 +19,21 @@
         },
         props:{
             title: String,
-            urlForCardBtn: String,
             img: String,
-            btnText: String,
             deployUrl: {
-                default: null,
-                type: String
-            }
+                type: String,
+                default: null
+            },
+            projectDetailsUrl: {
+                type: String,
+                default: ""
+            },
+            projectId: String,
+            urlForCardBtn: String,
+            btnText: String,
         }
     }
+    
 </script>
 
 <style scoped>
@@ -45,15 +41,21 @@
         position: relative;
         z-index: 1;
         margin: 20px;
-        max-height: 500px;
+        max-height: 600px;
+        width: 350px;
         overflow: auto;
+    }
+    .card-title{
+        text-align: center;
     }
     img.card-img-top{
         max-height: 165px;
         filter: hue-rotate(2deg);
     }
-    .card-btn{
-        margin-top: 10px;
+    @media (max-width: 768px) {
+        .card {
+            max-height: 300px;
+        }
     }
 </style>
 
