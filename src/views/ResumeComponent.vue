@@ -134,7 +134,7 @@ export default {
 }
 .resume-container {
   max-width: 80vw;
-  max-height: 85%;
+  max-height: 93%;
   margin: 0 auto; 
   margin-top: 25px;
   padding: 20px;

@@ -84,6 +84,7 @@ export default {
 }
 .projectDetailContainer{
     max-width: 80vw;
+    max-height: 93%;
     margin: 0 auto; 
     margin-top: 20px;
     padding: 20px;

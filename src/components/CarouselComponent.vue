@@ -86,12 +86,10 @@
         position: relative;
         bottom: 0;
       }
-
     .carousel-inner{
       height: unset;
       display: flex;
       align-items: center;      
-
     }
   }
 

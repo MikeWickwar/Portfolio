@@ -89,11 +89,9 @@ export default {
   padding: 10px 20px;
   box-shadow: 0 8px 10px rgba(0, 0, 0, 0.8);
   overflow: hidden;
-  transition: box-shadow 1s ease-in-out;
 }
 .sticky-header.open {
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
-  transition: box-shadow 0.2s ease-in-out;
 
 }
 nav {
