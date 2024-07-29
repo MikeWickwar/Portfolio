@@ -64,6 +64,9 @@ body {
   height: 100%;
   overflow: auto;
   background-image: url('./assets/sunset.jpg');
+  background-color: black;
+  background-position-x: center;
+  background-repeat: no-repeat;
 }
 #overlay{
   position: absolute;
